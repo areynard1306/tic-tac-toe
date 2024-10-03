@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-To Adrien</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+</head>
+</head>
+<body>
+    <div id="overlay" class="overlay"></div>
+    
+    <div id="popup" class="popup">
+        <h2>Qui commence ? (<span id="countdown">5</span> sec)</h2>
+        <button class="user-button-red" onclick="choisirJoueur('J1')">Joueur 1 (Rouge)</button>
+        <button class="user-button-blue" onclick="choisirJoueur('J2')">Joueur 2 (Bleu)</button>
+    </div>
+    <section>
+        <div id="confetti-container"></div>
+        <div class="scores">
+            <div id="scoreRedCase" class="score score-red">
+                <span id="scoreRedDisplay">0</span><h2><span id="symbole-red">X</span> Joueur 1</h2>
+            </div>
+            <div id="scoreBlueCase" class="score score-blue">
+                <span id="scoreBlueDisplay">0</span><h2><span id="symbole-blue">O</span> Joueur 2</h2>
+            </div>
+            <div class="score score-draw">
+                <span id="drawDisplay">0</span><h2>Égalité</h2>
+            </div>
+        </div>
+        <input type="hidden" id="scoreRed" value="0">
+        <input type="hidden" id="scoreBlue" value="0">
+        <input type="hidden" id="draw" value="0">
+    </section>
+    <div class="map">
+        <div class="ligne">
+            <button id="button0"></button>
+            <button id="button1"></button>
+            <button id="button2"></button>
+        </div>
+        <div class="ligne">
+            <button id="button3"></button>
+            <button id="button4"></button>
+            <button id="button5"></button>
+        </div>
+        <div class="ligne">
+            <button id="button6"></button>
+            <button id="button7"></button>
+            <button id="button8"></button>
+        </div>
+    </div>
+    <div class="winner">
+        <div id="winnerText"></div>
+        <button id="buttonRestart" style="visibility: hidden;">Refaire une partie</button>
+    </div>
+    <footer>
+        <p>Reynard Adrien &copy; - tic-tac-toe - 2024</p>
+    </footer>
+</body>
+</html>
+<script src="script.js"></script>
